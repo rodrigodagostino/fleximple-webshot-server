@@ -1,0 +1,25 @@
+{
+	"name": "fleximple-webshot-server",
+	"version": "1.0.0",
+	"description": "Allows the user to generate a screen capture of a specified website.",
+	"main": "server.js",
+	"scripts": {
+		"serve": "nodemon server.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/fleximple-webshot"
+	},
+	"author": "Rodrigo D’Agostino <rodrigo.dagostino@protonmail.com> (https://www.rodrigodagostino.com/)",
+	"license": "ISC",
+	"dependencies": {
+		"cors": "^2.8.5",
+		"express": "^4.17.1",
+		"puppeteer": "^10.2.0"
+	},
+	"devDependencies": {
+		"babel-eslint": "^10.1.0",
+		"eslint": "^7.32.0",
+		"nodemon": "^2.0.12"
+	}
+}
