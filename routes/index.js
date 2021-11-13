@@ -53,7 +53,8 @@ router.post( '/screenshot', async ( req, res ) => {
       }),
     )
   }
-  await page.waitForTimeout( parseInt( captureDelay * 1000 ) ) // Convert value to milliseconds.
+  // Convert value to milliseconds.
+  await page.waitForTimeout( parseInt( captureDelay * 1000 ) )
 
   // Take a screenshot
   const fileName = `screenshot_${ formattedDate }_${ targetUrl }.${
@@ -76,7 +77,7 @@ router.post( '/screenshot', async ( req, res ) => {
 })
 
 router.get( '/', ( req, res ) => {
-  res.sendFile( path.join( __dirname, '..', 'public', 'client', 'index.html' ) )
+  res.sendFile( path.join( __dirname, '..', 'public', 'index.html' ) )
 })
 
 module.exports = router
