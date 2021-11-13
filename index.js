@@ -13,17 +13,17 @@ app.set( 'port', process.env.PORT || 3080 )
 app.use( routes )
 
 if ( process.env.MODE === 'development' ) {
-	app.listen( app.get( 'port' ), function () {
-		console.log( 'Server started on port ' + app.get( 'port' ) )
-	} )
+  app.listen( app.get( 'port' ), function () {
+    console.log( 'Server started on port ' + app.get( 'port' ) )
+  })
 } else {
-	/* SSL certificates and key */
-	const cert = fs.readFileSync( './ssl/fleximple.com.cert' )
-	const ca = fs.readFileSync( './ssl/fleximple.com.cacert' )
-	const key = fs.readFileSync( './ssl/fleximple.com.key' )
-	
-	const httpsServer = https.createServer( { cert, ca, key }, app )
-	httpsServer.listen( app.get( 'port' ), () => {
-		console.log( 'Server started on port ' + app.get( 'port' ) )
-	} )
+  /* SSL certificates and key */
+  const cert = fs.readFileSync( './ssl/fleximple.com.cert' )
+  const ca = fs.readFileSync( './ssl/fleximple.com.cacert' )
+  const key = fs.readFileSync( './ssl/fleximple.com.key' )
+  
+  const httpsServer = https.createServer({ cert, ca, key }, app )
+  httpsServer.listen( app.get( 'port' ), () => {
+    console.log( 'Server started on port ' + app.get( 'port' ) )
+  })
 }

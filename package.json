@@ -1,26 +1,26 @@
 {
-	"name": "fleximple-webshot-server",
-	"version": "1.0.0",
-	"description": "Allows the user to generate a screen capture of a specified website (this is the server side of this project).",
-	"main": "index.js",
-	"scripts": {
-		"start": "nodemon -r dotenv/config index.js"
-	},
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/fleximple-webshot-server"
-	},
-	"author": "Rodrigo D’Agostino <rodrigo.dagostino@protonmail.com> (https://www.rodrigodagostino.com/)",
-	"license": "ISC",
-	"dependencies": {
-		"cors": "^2.8.5",
-		"express": "^4.17.1",
-		"puppeteer": "^10.2.0"
-	},
-	"devDependencies": {
-		"babel-eslint": "^10.1.0",
-		"dotenv": "^10.0.0",
-		"eslint": "^7.32.0",
-		"nodemon": "^2.0.12"
-	}
+  "name": "fleximple-webshot-server",
+  "version": "1.0.0",
+  "description": "Allows the user to generate a screen capture of a specified website (this is the server side of this project).",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon -r dotenv/config index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fleximple-webshot-server"
+  },
+  "author": "Rodrigo D’Agostino <rodrigo.dagostino@protonmail.com> (https://www.rodrigodagostino.com/)",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "puppeteer": "^10.4.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "dotenv": "^10.0.0",
+    "eslint": "^8.2.0",
+    "nodemon": "^2.0.15"
+  }
 }
