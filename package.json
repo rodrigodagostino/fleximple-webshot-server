@@ -4,7 +4,9 @@
   "description": "Allows the user to generate a screen capture of a specified website (this is the server side of this project).",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon -r dotenv/config index.js"
+    "start": "nodemon -r dotenv/config index.js",
+    "lint": "eslint --ext .ts,.js,.vue ./",
+    "lint:fix": "eslint --ext .ts,.js,.vue ./ --fix"
   },
   "repository": {
     "type": "git",
