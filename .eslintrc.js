@@ -49,6 +49,7 @@ module.exports = {
     'no-mixed-spaces-and-tabs': 'error',
     'no-multi-spaces': 'error',
     'no-redeclare': 'error',
+    'no-trailing-spaces': 'error',
     'no-useless-return': 'error',
     'no-whitespace-before-property': 'error',
     'object-curly-spacing': [ 'error', 'always' ],
