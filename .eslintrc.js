@@ -16,7 +16,10 @@ module.exports = {
     ecmaVersion: 2018,
   },
   rules: {
-    'array-bracket-spacing': [ 'error', 'always' ],
+    'array-bracket-spacing': [ 'error', 'always', {
+      arraysInArrays: false,
+      objectsInArrays: false,
+    }],
     'arrow-parens': [ 'error', 'as-needed' ],
     'arrow-spacing': [
       'error',
@@ -38,8 +41,8 @@ module.exports = {
     'computed-property-spacing': [ 'error', 'always' ],
     'func-call-spacing': 'error',
     indent: [ 'error', 2 ],
-    'key-spacing': [ 'error', { afterColon: true } ],
-    'max-len': [ 'error', { code: 80 } ],
+    'key-spacing': [ 'error', { afterColon: true }],
+    'max-len': [ 'error', { code: 80 }],
     'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
     'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
     'no-duplicate-imports': 'error',
@@ -66,7 +69,7 @@ module.exports = {
         asyncArrow: 'always',
       },
     ],
-    'space-in-parens': [ 'error', 'always', { exceptions: [ '{}' ] } ],
+    'space-in-parens': [ 'error', 'always', { exceptions: [ '{}' ] }],
     'space-unary-ops': [
       'error',
       {
