@@ -21,9 +21,9 @@ if ( process.env.MODE === 'development' ) {
   })
 } else {
   /* SSL certificates and key */
-  const cert = fs.readFileSync( './ssl/fleximple.com.cert' )
-  const ca = fs.readFileSync( './ssl/fleximple.com.cacert' )
-  const key = fs.readFileSync( './ssl/fleximple.com.key' )
+  const cert = fs.readFileSync( process.env.SSL_CERT_PATH )
+  const ca = fs.readFileSync( process.env.SSL_CACERT_PATH )
+  const key = fs.readFileSync( process.env.SSL_KEY_PATH )
 
   const httpsServer = https.createServer({ cert, ca, key }, app )
   httpsServer.listen( app.get( 'port' ), () => {
