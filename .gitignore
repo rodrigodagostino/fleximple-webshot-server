@@ -1,9 +1,9 @@
 .DS_Store
 node_modules
-client/
-dist/
-public/
-ssl/
+dist
+public
+!public/screenshots
+ssl
 
 
 # local env files
