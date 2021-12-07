@@ -10,9 +10,15 @@ This application requires **SSL certificates** in order to not only run, but als
 ```
 yarn install
 ```
+
 ### Initiate and update client submodule
 ```
 git submodule update --init
+```
+
+### Update client submodule to latest state
+```
+git submodule update --remote client
 ```
 
 ### Build client side
@@ -21,6 +27,7 @@ cd client
 yarn install
 yarn build
 ```
+
 ### Locally preview and hot-reloads
 ```
 yarn start
