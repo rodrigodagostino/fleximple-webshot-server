@@ -63,7 +63,9 @@ router.post( '/screenshot', async ( req, res ) => {
   await page.screenshot({
     path: `./public/screenshots/${ fileName }`,
     type: fileType,
-    ...fileType === 'jpeg' ? { quality: parseInt( fileQuality ) } : null,
+    ...fileType === 'jpeg' || fileType === 'webp'
+      ? { quality: parseInt( fileQuality ) }
+      : null,
     fullPage: fullPage,
   })
 
